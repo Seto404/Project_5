@@ -24,6 +24,24 @@
 		}
 		return false;
 	});
+//New Delete location function
+	$('#delete-location').submit(function(e) {
+		var id = map.editIndex;
+		
+		map.deleteMarker(id);
+		
+		return false;
+	});
+	
+	$('.clear').click(function() {
+		
+		map.clearSearch();
+		
+		$(this).hide();
+		
+		return false;	
+	});
+	
 //Switch to add location page and add to local storage	
 	$('#new-location').submit(function(e) {
 		
@@ -108,6 +126,16 @@
 			center: new google.maps.LatLng(39.773945, -86.170771)
 		},
 		callback: {
+			clearSearch: function() {
+				$('#location').val('');
+				$('#distance').val('');	
+			},
+			search: function() {
+				$('.clear').show();	
+			},
+			home: function() {
+				jQT.goTo('#home');	
+			},
 			newMarker: function(marker, lat, lng, index) {
 				google.maps.event.addListener(marker, 'click', function() {
 				

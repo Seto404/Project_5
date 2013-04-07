@@ -10,22 +10,23 @@
 	min-height: 300px;
 	width: 100%;
 	height: 100%;	
+	
 }
 
 .hidden-page {
 	margin: 0 10px;
+}
 
-.page {
+#page {
 	-moz-box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
 	-webkit-box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
 	box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0;
-	border: 1px solid #52657f;
+	border: 1px solid #181818;
 	padding: 10px;
 	background: white;
 	margin: 10px;
 	border-radius: 8px;
 }
-
 
 .page img {
 	width: 100%;
@@ -67,6 +68,7 @@
 	width: 99%;
 	margin: 1em .5% 0 !important;
 }
+
 
 
 /* -----------------------------------------
